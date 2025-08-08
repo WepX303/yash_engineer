@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import vectorLogo from './assets/Vector.svg';
+import bgDots from './assets/bg-dots.png';
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +11,8 @@ function App() {
     <div className="container">
       <nav className="navbar">
         <div className="nav__logo">
-          <img src="/assets/Vector.svg" alt="logo" />
+          {/* <img src="/assets/Vector.svg" alt="logo" /> */}
+          <img src={vectorLogo} alt="logo" />
         </div>
         <ul className={`nav__links ${menuOpen ? "active" : ""}`}>
           <li className="link">
@@ -35,7 +39,8 @@ function App() {
       </nav>
 
       <div className="destination__container">
-        <img className="bg__img__1" src="/assets/bg-dots.png" alt="bg" />
+        <img className="bg__img__1" src={bgDots} alt="bg" />
+
         <div className="content">
           <h1>YASH<br />ENGINEER<br /><span>GROUP</span></h1>
           <p>
